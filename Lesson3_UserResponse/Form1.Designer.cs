@@ -32,11 +32,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.groupBoxClick = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxClicksPerMin = new System.Windows.Forms.TextBox();
             this.buttonCalculateClicks = new System.Windows.Forms.Button();
             this.buttonStart = new System.Windows.Forms.Button();
             this.pictureBoxGraph = new System.Windows.Forms.PictureBox();
-            this.textBoxClicksPerMin = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.checkBoxHardcoreOn = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).BeginInit();
             this.groupBoxClick.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGraph)).BeginInit();
@@ -80,6 +81,23 @@
             this.groupBoxClick.TabStop = false;
             this.groupBoxClick.Text = "Кликомер =) ";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(25, 78);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(325, 65);
+            this.label2.TabIndex = 2;
+            this.label2.Text = resources.GetString("label2.Text");
+            // 
+            // textBoxClicksPerMin
+            // 
+            this.textBoxClicksPerMin.Enabled = false;
+            this.textBoxClicksPerMin.Location = new System.Drawing.Point(67, 163);
+            this.textBoxClicksPerMin.Name = "textBoxClicksPerMin";
+            this.textBoxClicksPerMin.Size = new System.Drawing.Size(198, 20);
+            this.textBoxClicksPerMin.TabIndex = 1;
+            // 
             // buttonCalculateClicks
             // 
             this.buttonCalculateClicks.Location = new System.Drawing.Point(95, 189);
@@ -92,9 +110,9 @@
             // 
             // buttonStart
             // 
-            this.buttonStart.Location = new System.Drawing.Point(34, 75);
+            this.buttonStart.Location = new System.Drawing.Point(46, 154);
             this.buttonStart.Name = "buttonStart";
-            this.buttonStart.Size = new System.Drawing.Size(75, 23);
+            this.buttonStart.Size = new System.Drawing.Size(88, 78);
             this.buttonStart.TabIndex = 3;
             this.buttonStart.Text = "Start Test!";
             this.buttonStart.UseVisualStyleBackColor = true;
@@ -109,28 +127,22 @@
             this.pictureBoxGraph.TabIndex = 4;
             this.pictureBoxGraph.TabStop = false;
             // 
-            // textBoxClicksPerMin
+            // checkBoxHardcoreOn
             // 
-            this.textBoxClicksPerMin.Enabled = false;
-            this.textBoxClicksPerMin.Location = new System.Drawing.Point(67, 163);
-            this.textBoxClicksPerMin.Name = "textBoxClicksPerMin";
-            this.textBoxClicksPerMin.Size = new System.Drawing.Size(198, 20);
-            this.textBoxClicksPerMin.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 78);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(325, 65);
-            this.label2.TabIndex = 2;
-            this.label2.Text = resources.GetString("label2.Text");
+            this.checkBoxHardcoreOn.AutoSize = true;
+            this.checkBoxHardcoreOn.Location = new System.Drawing.Point(31, 90);
+            this.checkBoxHardcoreOn.Name = "checkBoxHardcoreOn";
+            this.checkBoxHardcoreOn.Size = new System.Drawing.Size(103, 17);
+            this.checkBoxHardcoreOn.TabIndex = 5;
+            this.checkBoxHardcoreOn.Text = "Hardcore Test!!!";
+            this.checkBoxHardcoreOn.UseVisualStyleBackColor = true;
             // 
             // UR_MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1042, 450);
+            this.Controls.Add(this.checkBoxHardcoreOn);
             this.Controls.Add(this.pictureBoxGraph);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.groupBoxClick);
@@ -157,6 +169,7 @@
         private System.Windows.Forms.Button buttonCalculateClicks;
         private System.Windows.Forms.TextBox textBoxClicksPerMin;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox checkBoxHardcoreOn;
     }
 }
 

@@ -6,12 +6,12 @@ using System.Windows.Forms;
 
 namespace Lesson3_UserResponse
 {
-    sealed class DoTestClass
+    internal class DoTestClass
     {
         /// <summary>
         ///     отступ пикселей от краёв экрана
         /// </summary>
-        private const int indent = 30;
+        const int indent = 30;
 
         /// <summary>
         ///     Высота текущего экрана, пикселей
@@ -25,32 +25,32 @@ namespace Lesson3_UserResponse
         /// <summary>
         ///     Меньшее число сотен миллисекунд для генерации рандома
         /// </summary>
-        private const int MinRandom = 5;
+        protected const int MinRandom = 5;
 
         /// <summary>
         ///     Большее число сотен миллисекунд для генерации рандома
         /// </summary>
-        private const int MaxRandom = 50;
+        protected const int MaxRandom = 50;
         /// <summary>
         ///     Пременная рандома
         /// </summary>
-        private Random Rnd = new Random();
+        protected Random Rnd = new Random();
         /// <summary>
         ///     Окончание "секундомера" реакции на мессадж-бокс
         /// </summary>
-        private DateTime _timerEnd;
+        protected DateTime _timerEnd;
 
         /// <summary>
         ///     Начало "секундомера" реакции на мессадж-бокс
         /// </summary>
-        private DateTime _timerStart;
+        protected DateTime _timerStart;
 
 
         /// <summary>
         ///     Сделать необходимое число тестов и вернуть List<TimeSpan> реакций пользователя
         /// </summary>
         /// <returns></returns>
-        public List<TimeSpan> DoMeasure(int numTests)
+        public virtual List<TimeSpan> DoMeasure(int numTests)
         {
             List<TimeSpan> Results = new List<TimeSpan>();
 
