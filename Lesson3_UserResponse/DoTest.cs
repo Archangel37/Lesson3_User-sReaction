@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace Lesson3_UserResponse
 {
-    internal class DoTestClass
+    internal class DoTest
     {
         /// <summary>
         ///     отступ пикселей от краёв экрана
@@ -25,25 +25,29 @@ namespace Lesson3_UserResponse
         /// <summary>
         ///     Меньшее число сотен миллисекунд для генерации рандома
         /// </summary>
-        protected const int MinRandom = 5;
+        private const int MinRandom = 5;
 
         /// <summary>
         ///     Большее число сотен миллисекунд для генерации рандома
         /// </summary>
-        protected const int MaxRandom = 50;
+        private const int MaxRandom = 50;
         /// <summary>
         ///     Пременная рандома
         /// </summary>
-        protected Random Rnd = new Random();
+        private Random Rnd = new Random();
         /// <summary>
         ///     Окончание "секундомера" реакции на мессадж-бокс
         /// </summary>
-        protected DateTime _timerEnd;
+        private DateTime _timerEnd;
 
         /// <summary>
         ///     Начало "секундомера" реакции на мессадж-бокс
         /// </summary>
-        protected DateTime _timerStart;
+        private DateTime _timerStart;
+
+        protected Random GetRandom() => Rnd;
+        protected int GetMinRandom() => MinRandom;
+        protected int GetMaxRandom() => MaxRandom;
 
 
         /// <summary>
