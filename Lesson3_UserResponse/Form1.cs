@@ -19,7 +19,7 @@ namespace Lesson3_UserResponse
         private void buttonStart_Click(object sender, EventArgs e)
         {
             //Новая переменная класса DoTestClass, создаётся каждый раз при клике на кнопку Start
-            DoTestClass doTest = new DoTestClass();
+            DoTest doTest = checkBoxHardcoreOn.Checked ? new DoTest() : new DoTestChild();
             //Выдать результаты в MessageBox'e
             MessageBox.Show(string.Join("\n", doTest.DoMeasure((int)numericUpDown.Value)), "Test time", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
